@@ -12,8 +12,16 @@
   "content_scripts": [
     {
       "js": ["main/main.js"],
-      "css": ["main/main.css"],
-      "matches": ["https://ecaplus.co.kr"]
+      "matches": ["http://ecaplus.co.kr/*"]
+    },
+    {
+      "js": ["main/main.js", "main/login.js"],
+      "matches": ["http://ecaplus.co.kr/attend/"]
+    },
+    {
+      "js": ["main/main.js", "main/attend.js"],
+      "css": ["main/attend.css"],
+      "matches": ["http://ecaplus.co.kr/attend/main"]
     }
   ],
   "action": {

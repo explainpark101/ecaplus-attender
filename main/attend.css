@@ -1,0 +1,11 @@
+body:not(:has(.no-extension)) div#wrapper nav {
+  display: none;
+}
+body:not(:has(.no-extension)) button#to-fullscreen {
+  transition: 150ms;
+  transform: scale(5);
+  border: 3px solid red;
+}
+body:not(:has(.no-extension)) button#to-fullscreen:hover {
+  background: springgreen;
+}/*# sourceMappingURL=attend.css.map */

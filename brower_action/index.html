@@ -8,32 +8,41 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="center">
-      <div class="logo">
-        <p class="title">ecaplus 출결기</p>
+    <div class="wrapper">
+      <div class="center">
+        <div class="logo">
+          <p class="title">ecaplus 출결기</p>
+        </div>
       </div>
+      <div class="d-flex justify-content-center" style="margin-top: .5rem; margin-bottom: .5rem;">
+        <label for="activate" class="btn btn-outline-warning">
+          <input type="checkbox" name="activate" id="activate"/> 활성화하기
+        </label>
+      </div>
+      <fieldset>
+        <legend>학원 식별코드</legend>
+        <div id="list"> 
+          <input type="text" class='form-control' name="institute-code">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>비밀번호</legend>
+        <div id="list"> 
+          <input type="text" class='form-control' name="password-code">
+        </div>
+      </fieldset>
+      <div class="d-flex justify-content-center" style="margin-top: .5rem;">
+        <a href="http://ecaplus.co.kr/attend/" class="btn btn-warning">ecaplus 출결기 바로가기</a>
+      </div>
+      <div>
+        <h5>문의 : <a 
+          href="mailto:jaehyung101@korea.ac.kr?subject=ecaplus 출결기 문의"
+          style="color:white;"
+          >jaehyung101@korea.ac.kr</a></h5>
+        
+      </div>
+      <script src="./index.js"></script>
     </div>
-    <fieldset>
-      <legend>학원 식별코드</legend>
-      <div id="list"> 
-        <input type="text" class='form-control' name="institute-code">
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>비밀번호</legend>
-      <div id="list"> 
-        <input type="text" class='form-control' name="password-code">
-      </div>
-    </fieldset>
-
-    <div>
-      <h5>문의 : <a 
-        href="mailto:jaehyung101@korea.ac.kr?subject=ecaplus 출결기 문의"
-        style="color:white;"
-        >jaehyung101@korea.ac.kr</a></h5>
-      
-    </div>
-    <script src="./index.js"></script>
 
   </body>
 </html>

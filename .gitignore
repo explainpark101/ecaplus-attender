@@ -1,2 +1,5 @@
 fromEiE/
 screenshots
+bootstrap
+*.scss
+*.css.map
