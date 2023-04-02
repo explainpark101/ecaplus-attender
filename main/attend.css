@@ -3,9 +3,13 @@ body:not(:has(.no-extension)) div#wrapper nav {
 }
 body:not(:has(.no-extension)) button#to-fullscreen {
   transition: 150ms;
-  transform: scale(5);
   border: 3px solid red;
 }
 body:not(:has(.no-extension)) button#to-fullscreen:hover {
   background: springgreen;
+}
+
+div#wrapper {
+  min-height: calc(100vh - 20px);
+  min-height: calc(100dvh - 20px);
 }/*# sourceMappingURL=attend.css.map */

@@ -4,6 +4,11 @@ const renderAll = () => {
             document.body.insertAdjacentHTML("beforeend","<div class='no-extension d-none'></div>");
             return;
         }
+
+        const themes = document.querySelector(".visually-hidden-fullscreen:has(.themes)");
+        const previewImages = document.querySelector("div.input-group:has([for='image-preview-input'])");
+        previewImages.insertAdjacentElement("afterEnd", themes);
+
         const checkbox_elements = [
             document.querySelector("#kitty-mode"),
             document.querySelector("#corgi-mode"),
