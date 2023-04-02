@@ -3,3 +3,4 @@ screenshots
 bootstrap
 *.scss
 *.css.map
+*.py
