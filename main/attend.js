@@ -18,6 +18,10 @@ const renderAll = () => {
             el.checked = true;
             el.dispatchEvent(new Event("change"));
         })
+
+        setTimeout(()=>{
+            location.reload();
+        },1000*3600)
     });
 }
 
