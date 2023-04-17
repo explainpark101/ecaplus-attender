@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "author": "Park, JaeHyung",
   "name": "Ecaplus 출결기",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "ecaplus 출결기입니다.",
   "icons": {
     "16": "logo/logo16.png",
