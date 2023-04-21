@@ -19,6 +19,10 @@ const renderAll = () => {
             el.dispatchEvent(new Event("change"));
         })
 
+        setInterval(()=>{
+            // 1시간에 한번씩 목록 업데이트
+            document.querySelector("button#reload-students").dispatchEvent(new Event("updateArray"));
+        }, 3600);
         setTimeout(()=>{
             location.reload();
         },1000*3600)
