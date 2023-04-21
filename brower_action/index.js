@@ -27,6 +27,7 @@ const renderAll = async () => {
       const value = target.value;
       let data = {};
       data[name] = value;
+      data["시도횟수"] = 0;
       chrome.storage.local.set(data);
     });
     element.addEventListener("focus", ({currentTarget})=>{
@@ -49,4 +50,11 @@ const renderAll = async () => {
 document.querySelector("a").addEventListener("click", ({currentTarget})=>{
   const {href} = currentTarget;
   window.open(href);
+})
+
+
+fetch("../manifest.json")
+.then(resp=>resp.json())
+.then(({version})=>{
+  document.querySelector("#version").innerText = `version: ${version}`;
 })
