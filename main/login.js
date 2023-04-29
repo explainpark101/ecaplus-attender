@@ -20,6 +20,7 @@ const storageGet = (key) => new Promise((resolve, reject)=>{
     chrome.storage.local.get(key, (res)=>resolve(res));
 });
 
+let loading = false;
 const renderAll = () => {
     const instituteInput = document.querySelector(`[name="기관"]`);
     const passwordInput = document.querySelector(`[name="비밀번호"]`);
@@ -37,7 +38,8 @@ const renderAll = () => {
         })
     })
     .then((data)=>{
-        if(data.시도횟수??0 > 100) return;
+        if((data.시도횟수??0 > 100) || loading) return;
+        loading = true;
         return fetch(window.location.href, {
             method: "POST",
             headers: {
@@ -49,6 +51,7 @@ const renderAll = () => {
     })
     .then(resp=>resp.json())
     .then(data=>{
+        loading = false;
         if(data.success && data.redirect){
             window.location.href = data.redirect;
             document.body.style.backgroundColor = "";
