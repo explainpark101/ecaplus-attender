@@ -22,6 +22,8 @@ const storageGet = (key) => new Promise((resolve, reject)=>{
 
 let loading = false;
 const renderAll = () => {
+    if (loading) return;
+    
     const instituteInput = document.querySelector(`[name="기관"]`);
     const passwordInput = document.querySelector(`[name="비밀번호"]`);
     storageGet(["institute-code", "password-code", "시도횟수"]).then(data=>{
